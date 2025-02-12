@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MindtoPaper</title> <!--TITLE OF THE PAGE-->
+        <link rel="stylesheet" type="text/css" href="css/selection.css"> <!--LINK TO CSS FILE FOR SELECTION PAGE-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <section class="top-bar"> <!--TOP NAVIGATION BAR ('MindtoPaper,' Login, Signup, etc.)-->
+                <div class="logo"> <!--LOGO-->
+                    <a href="index.html">
+                        <h1>MindtoPaper</h1>
+                    </a>
+                </div>
+                <div class="nav-buttons"> <!--LOGIN AND SIGNUP BUTTONS-->
+                    <a href="#" class="btn" onclick="openModal('loginModal')">Log In</a>
+                    <a href="#" class="btn" onclick="openModal('signupModal')">Sign Up</a>
+                </div> 
+                <div id="loginModal" class="modal"> <!--LOGIN MODAL-->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                        <h2><span class="relaxed"><span class="bold-text">Log In to Your Account</span></span></h2>
+                        <form>
+                            <label for="login-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                            <input type="email" id="login-email" required>
+                            <label for="login-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                            <input type="password" id="login-password" required>
+                            <button type="submit" class="btn"><span class="normal-text">Log In</span></button>
+                        </form>
+                        <div class="modal-footer"> <!--FOOTER OF LOGIN MODAL-->
+                            <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign up here.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="signupModal" class="modal"> <!--SIGNUP MODAL-->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                        <h2><span class="relaxed">Register a New Account</span></h2>
+                        <form>
+                            <label for="signup-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                            <input type="email" id="signup-email" required>
+                            <label for="signup-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                            <input type="password" id="signup-password" required>
+                            <button type="submit" class="btn"><span class="normal-text"><span class="bold-text">Sign Up</span></span></button>
+                        </form>
+                        <div class="modal-footer"> <!--FOOTER OF SIGNUP MODAL-->
+                            <p>Already have an account? <a href="#" onclick="switchToLogin()">Log in here.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="hero"> <!--HERO SECTION (Title, Subtitle, Input Field, Evaluate Button)-->
+                <h1>What do you need help with?</h1>
+                <h2>Select a tool below and turn your ideas into essays!</h2>
+            </div>
+            <div class="link-container"> 
+                <a href="sourcefinder.html" class="link-box">
+                  <div class="link-title">Find Sources</div> <!--LINK TO FIND SOURCES PAGE-->
+                  <div class="subtitle-box">
+                    <span class="subtitle-text">Quickly discover credible research that supports your argument</span>
+                    <span class="arrow">→</span>
+                  </div>
+                </a>
+                <a href="credibility.html" class="link-box">
+                    <div class="link-title">Evaluate Credibility</div> <!--LINK TO EVALUATE CREDIBILITY PAGE-->
+                    <div class="subtitle-box">
+                      <span class="subtitle-text">Assess the reliability of your source with a credibility score and summary</span>
+                      <span class="arrow">→</span>
+                    </div>
+                </a>
+                <a href="title.html" class="link-box">
+                    <div class="link-title">Generate Outline</div> <!--LINK TO GENERATE OUTLINE PAGE-->
+                    <div class="subtitle-box">
+                      <span class="subtitle-text">Create a structured essay outline tailored to your topic and requirements</span>
+                      <span class="arrow">→</span>
+                    </div>
+                </a>
+            </div>
+        </header>
+    </body>
+    <script src="js/selection.js"></script> <!--LINK TO JAVASCRIPT FILE FOR SELECTION PAGE-->
+</html>

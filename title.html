@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MindtoPaper</title> <!--TITLE OF THE PAGE-->
+        <link rel="stylesheet" type="text/css" href="css/title.css"> <!--LINK TO CSS FILE FOR TITLE PAGE-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <section class="top-bar"> <!--TOP NAVIGATION BAR ('MindtoPaper,' Login, Signup, etc.)-->
+                <div class="logo"> <!--LOGO-->
+                    <a href="index.html">
+                        <h1>MindtoPaper</h1>
+                    </a>
+                </div>
+                <div class="nav-buttons"> <!--LOGIN AND SIGNUP BUTTONS-->
+                    <a href="#" class="btn" onclick="openModal('loginModal')">Log In</a>
+                    <a href="#" class="btn" onclick="openModal('signupModal')">Sign Up</a>
+                </div> 
+                <div id="loginModal" class="modal"> <!--LOGIN MODAL-->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                        <h2><span class="relaxed"><span class="bold-text">Log In to Your Account</span></span></h2>
+                        <form>
+                            <label for="login-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                            <input type="email" id="login-email" required>
+                            <label for="login-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                            <input type="password" id="login-password" required>
+                            <button type="submit" class="btn"><span class="normal-text">Log In</span></button>
+                        </form>
+                        <div class="modal-footer"> <!--FOOTER OF LOGIN MODAL-->
+                            <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign up here.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="signupModal" class="modal"> <!--SIGNUP MODAL-->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                        <h2><span class="relaxed">Register a New Account</span></h2>
+                        <form>
+                            <label for="signup-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                            <input type="email" id="signup-email" required>
+                            <label for="signup-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                            <input type="password" id="signup-password" required>
+                            <button type="submit" class="btn"><span class="normal-text"><span class="bold-text">Sign Up</span></span></button>
+                        </form>
+                        <div class="modal-footer"> <!--FOOTER OF SIGNUP MODAL-->
+                            <p>Already have an account? <a href="#" onclick="switchToLogin()">Log in here.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="hero"> <!--HERO SECTION (Title, Subtitle, Input Field, Evaluate Button)-->
+                <h1>Start Your Essat</h1>
+                <h2>Let's begin by understanding what you want to write about</h2>
+            </div>
+            <div class="input-container"> <!--INPUT FIELD FOR ESSAY TITLE-->
+                <input type="text" id="essayTitle" placeholder="Enter your essay title here..." />
+            </div>
+            <div class="boxes-container"> <!--BOXES FOR ESSAY TOOLS (Selection, Brainstorming, etc.)-->
+                <div class="column">
+                  <div class="option-box" data-option="option1"> <!--OPTION 1 BOX-->
+                    <label class="option-label">
+                      <input type="checkbox" name="option" class="option-checkbox" value="option1" />
+                      <span class="option-title">Argumentative Essay</span>
+                    </label>
+                    <div class="option-description"> Presents a claim and supports it with evidence, aiming to persuade the reader.</div>
+                  </div>
+                  <div class="option-box" data-option="option2"> <!--OPTION 2 BOX-->
+                    <label class="option-label">
+                      <input type="checkbox" name="option" class="option-checkbox" value="option2" />
+                      <span class="option-title">Expository Essay</span>
+                    </label>
+                    <div class="option-description">Explains a topic using facts, examples, and analysis without including personal opinions.</div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="option-box" data-option="option3"> <!--OPTION 3 BOX-->
+                    <label class="option-label">
+                      <input type="checkbox" name="option" class="option-checkbox" value="option3" />
+                      <span class="option-title">Narrative Essay</span>
+                    </label>
+                    <div class="option-description">Tells a story or recounts an experience, often written in the first person.</div>
+                  </div>
+                  <div class="option-box" data-option="option4"> <!--OPTION 4 BOX-->
+                    <label class="option-label">
+                      <input type="checkbox" name="option" class="option-checkbox" value="option4" />
+                      <span class="option-title">Compare and Contrast Essay</span>
+                    </label>
+                    <div class="option-description">Examines similarities and differences between two or more subjects.</div>
+                  </div>
+                </div>
+            </div>
+        </header>
+    </body>
+    <script src="js/title.js"></script> <!--LINK TO JAVASCRIPT FILE FOR TITLE PAGE-->
+</html>

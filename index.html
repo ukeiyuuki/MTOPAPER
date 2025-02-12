@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindtoPaper</title> <!--TITLE OF THE PAGE-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> <!--LINK TO CSS FILE FOR STYLES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="top-bar"> <!--TOP NAVIGATION BAR ('MindtoPaper,' Login, Signup, etc.)-->
+            <div class="logo"> <!--LOGO-->
+                <a href="index.html">
+                    <h1>MindtoPaper</h1>
+                </a>
+            </div>
+            <div class="nav-buttons"> <!--LOGIN AND SIGNUP BUTTONS-->
+                <a href="#" class="btn" onclick="openModal('loginModal')">Log In</a>
+                <a href="#" class="btn" onclick="openModal('signupModal')">Sign Up</a>
+            </div> 
+            <div id="loginModal" class="modal"> <!--LOGIN MODAL-->
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                    <h2><span class="relaxed">Log In to Your Account</span></h2>
+                    <form>
+                        <label for="login-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                        <input type="email" id="login-email" required>
+                        <label for="login-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                        <input type="password" id="login-password" required>
+                        <button type="submit" class="btn">Log In</button>
+                    </form>
+                    <div class="modal-footer">
+                        <p>Don't have an account? <a href="#" onclick="switchToSignup()">Sign up here.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div id="signupModal" class="modal"> <!--SIGNUP MODAL-->
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                    <h2><span class="relaxed">Register a New Account</span></h2>
+                    <form>
+                        <label for="signup-email"><span class="bold-text"><span class="relaxed">Email:</span></span></label>
+                        <input type="email" id="signup-email" required>
+                        <label for="signup-password"><span class="bold-text"><span class="relaxed">Password:</span></span></label>
+                        <input type="password" id="signup-password" required>
+                        <button type="submit" class="btn">Sign Up</button>
+                    </form>
+                    <div class="modal-footer">
+                        <p>Already have an account? <a href="#" onclick="switchToLogin()">Log in here.</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero"> <!--HERO SECTION (Title, Subtitle, Input Field, Evaluate Button)-->
+            <div class="title-container">
+                <h1 class="bold-text"><span class="relaxed"> The AI Assistant for</span> <span class="highlight">Thinkers</span><span class="relaxed">, </span><span class="new-line"><span class="relaxed">not Copy-Pasters.</span></span></h1>
+                <p class="relaxed">MindToPaper is the essay assistant that doesn't write for you but <span class="bold-text">empowers you to</span><span class="new-line"><span class="bold-text">write better.</span> It guides you through the entire essay-writing process, making it<span class="new-line">easier and more efficient without taking away the learning experience.</span></span></p>
+                <a href="selection.html" class="btn start-now">Start Writing Better Essays</a>
+            </div>
+        </section>
+    </header>
+    <div class="box-container"> <!--FEATURE BOXES (Find Sources, Evaluate Credibility, Generate Outline)-->
+        <div class="feature-box">
+            <img src="images/brainstorming.jpg" alt="Brainstorming">
+            <h3><a href="sourcefinder.html"><span class="highlight">Find Sources</span></a></h3>
+            <p><span class ="relaxed">Quickly discover credible sources that<span class="bold-text"> support</span> or <span class="bold-text">challenge</span> your argument.</span></p>
+        </div>
+        <div class="feature-box">
+            <img src="images/outline.jpg" alt="Outline">
+            <h3><a href="credibility.html"><span class="highlight">Evaluate Credibility</span></a></h3>
+            <p><span class="relaxed">Assess the reliability of any source with an <span class="bold-text">automated credibility score</span> and <span class="bold-text">summary.</span></span></p>
+        </div>
+        <div class="feature-box">
+            <img src="images/writing.jpg" alt="Writing">
+            <h3><a href="brainstorm.html"><span class="highlight">Generate Outline</span></a></h3>
+            <p><span class="relaxed">Create a <span class="bold-text">structured essay outline</span> tailored to your topic and requirements in <span class="bold-text">seconds.</span></span></p>
+        </div>
+    </div>
+    <div class="feature-detail-box"> <!--FEATURE DETAIL BOX (Structured Writing, Simplified)-->
+        <div class="fd-top-left">
+            <h2><span class="relaxed">Structured Writing, <span class="new-line"><span class="highlight">Simplified</span></span></h2>
+            <p><span class="font-increase1">Quickly discover credible research and sources that support or challenge your argument. Easily locate reliable studies, reports, and articles that align with or counter your perspective.</span></p>
+        </div>
+        <div class="fd-top-right">
+            <img src="images/DEFAULT1.jpg" alt="Step 1 Image" />
+        </div>
+        <div class="fd-bottom-left">
+            <img src="images/DEFAULT2.jpg" alt="Step 2 Image" />
+        </div>
+        <div class="fd-bottom-right">
+            <p><span class="relaxed">Simply enter your argument, and the system will generate a list of relevant sources with summaries and direct links, saving you time on research.</span></p>
+            <a href="brainstorm.html" class="try-button">Try it now ></a>
+        </div>
+    </div>
+    <div class="source-assessment-container"> <!--SOURCE ASSESSMENT SECTION (Assess Your Source)-->
+        <div class="sa-image">
+            <img src="images/assess.jpg" alt="Assess Your Source" />
+        </div>
+        <div class="sa-text">
+            <h2><span class="relaxed"><span class="italic-text">Assess <span class="new-line">Your Source</span></span></span></h2>
+            <p><span class="relaxed">Assess the reliability of any source with a <span class="bold-text">credibility score and summary. </span><span class="new-line">Paste a link or provide source details, and get an instant evaluation of its credibility based on key factors like <span class="bold-text">accuracy, bias, and authority.</span></span></span></p>
+        </div>
+    </div>
+    <div class="outline-section"> <!--OUTLINE SECTION (Generate an Outline)-->
+        <h2><span class="relaxed"></span>Generate an Outline</h2>
+        <div class="outline-grid">
+            <div class="quadrant quadrant-top-left">
+                <img src="images/argumentnarrative.jpg" alt="Top Left Image"/>
+                <div class="quad-text">
+                    <h3><span class="relaxed">Choose Your Essay Style</span></h3>
+                    <p><span class="relaxed">Pick a format or customize it to fit your needs.</span></p>
+                </div>
+            </div>
+            <div class="quadrant quadrant-top-right">
+                <img src="##images/wordc.jpg" alt="Top Right Image"/>
+                <div class="quad-text">
+                    <h3><span class="relaxed">Set Your Word Count & Structure</span></h3>
+                    <p><span class="relaxed">Define the length and number of paragraphs.</span></p>
+                </div>
+            </div>
+            <div class="quadrant quadrant-bottom-left">
+                <div class="content-wrapper">
+                    <img src="##images/brainstorm.jpg" alt="Bottom Left Image"/>
+                    <div class="quad-text">
+                        <h3><span class="relaxed">Brainstorm & Organize Ideas</span></h3>
+                        <p><span class="relaxed">Gather key points and structure your thoughts.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="quadrant quadrant-bottom-right">
+                <img src="##images/text.jpg" alt="Bottom Right Image"/>
+                <div class="quad-text">
+                    <h3><span class="relaxed">Write with a Smart Outline</span></h3>
+                    <p><span class="relaxed"></span>Build your essay using a clear, AI-generated framework.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="simple-footer"> <!--FOOTER SECTION-->
+        <p>2025 MindtoPaper. All rights reserved.</p>
+    </div>
+</body>
+<script src="js/script.js"></script> <!--LINK TO JAVASCRIPT FILE FOR INDEX PAGE-->
+</html>
